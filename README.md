@@ -51,6 +51,9 @@ Insigths were found through an EDA on the dataset, in the notebook. In addition,
 2. Run the docker image and deploy the service locally using `docker run -it --rm -p 9696:9696 lead-scoring`
 3. In a terminal with the pipenv environment activated type and run: `python predict_test.py`
 
+This is what it should like:
+![image](https://github.com/g-verikios/Lead-Scoring/assets/113807311/67def9b4-9d48-4a68-93e2-a8ee6f9b532f)
+
 Note: To stop serving use Crtl+C
 
 ## Things that could be done better and other remarks
