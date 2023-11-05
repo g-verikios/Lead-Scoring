@@ -24,7 +24,7 @@ The environment used for development is based on the course of [machine-learning
 
 For the bare minumus to run this code you will need:
 - pipenv that is used for python package management, you can install it in your terminal with `pip install pipenv`
-- To be able to utilize the environment you need to open up a terminal in this repo folder and type: `pipenv shell` to activate the virtual environment.
+- To be able to utilize the environment you need to open up a terminal in this repo folder and type: `pipenv shell` to activate the virtual environment and install the dependencies described in the pipfiles.
 - Docker set up for your system (if you do not have it already you can check the guide above for installing docker)
 - A wsl distro if you are on windows (again you can find details in the above guide) or simply be on ubuntu. 
   
@@ -46,10 +46,10 @@ Insigths were found through an EDA on the dataset, in the notebook. In addition,
   After setting up the environment using pipenv you can open the notebook with: `jupyter notebook notebook.ipynb`
 ### Model training
   Simply open a terminal in this folder and type: `pipenv run python train.py`
-### Running the service (local)
+### Running the service (local) and testing
 1. Build the docker image using `docker build -t lead-scoring .`
 2. Run the docker image and deploy the service locally using `docker run -it --rm -p 9696:9696 lead-scoring`
-3. In a terminal with the pipenv environment activated type and run: `python predict_test.py`
+3. In a terminal with the pipenv environment activated type and run: `python predict_test.py`, this runs a test and should return the response from the service similar to the screenshot below.
 
 This is what it should like:
 ![image](https://github.com/g-verikios/Lead-Scoring/assets/113807311/67def9b4-9d48-4a68-93e2-a8ee6f9b532f)
