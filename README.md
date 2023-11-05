@@ -26,7 +26,7 @@ For the bare minumus to run this code you will need:
 - pipenv that is used for python package management, you can install it in your terminal with `pip install pipenv`
 - To be able to utilize the environment you need to open up a terminal in this repo folder and type: `pipenv shell` to activate the virtual environment.
 - Docker set up for your system (if you do not have it already you can check the guide above for installing docker)
-- A wsl distro if you are on windows (again you can find details in the above guid) or simply be on ubuntu. 
+- A wsl distro if you are on windows (again you can find details in the above guide) or simply be on ubuntu. 
   
 ## Contents
 - notebook.ipynb: the notebook where an exploratory data analysis (EDA) is conducted and the best performing model is selected
@@ -42,18 +42,19 @@ For the bare minumus to run this code you will need:
 Insigths were found through an EDA on the dataset, in the notebook. In addition, 3 different models are compared to choose the one with the best performance.
 
 ## How to use
-- Notebook with EDA
-After setting up the environment using pipenv you can open the notebook with: `jupyter notebook notebook.ipynb`
-- Model training
-Simply open a terminal in this folder and type: `pipenv run python train.py`
-- Running the service (local)
+### Notebook with EDA
+  After setting up the environment using pipenv you can open the notebook with: `jupyter notebook notebook.ipynb`
+### Model training
+  Simply open a terminal in this folder and type: `pipenv run python train.py`
+### Running the service (local)
 1. Build the docker image using `docker build -t lead-scoring .`
 2. Run the docker image and deploy the service locally using `docker run -it --rm -p 9696:9696 lead-scoring`
 3. In a terminal with the pipenv environment activated type and run: `python predict_test.py`
 
 Note: To stop serving use Crtl+C
 
-## Things that could be done better
+## Things that could be done better and other remarks
 - The part of handling the features, for e.g. which ones to drop which ones to keep could be set up perhaps in a better way so that it's customizable in a simpler way. Now the column names are hardcoded and this is probably not the cleanest option if a later EDA on newer datasets brings other insights in terms of feature importance etc.
 - Generally wanted to do something more exotic other than the boilerplate used in the course for the scripts deploying the model, but in this case time was really limited, perhaps something to change in the future.
 - Serving the app on a webserver instead of local deployment
+- For serving the app on windows instead of ubuntu you could use waitress to serve the flask application, a few modifications might be needed in the Dockerfile and the pipfiles
