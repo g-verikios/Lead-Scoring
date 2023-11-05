@@ -7,7 +7,7 @@ The dataset basically includes various user data (e.g. contact preferences, sour
 The aim is to perform lead scoring, in other words determine if a lead is worth passing from the marketing team on to sales based on the available data. As seen from the image we start from an initial pool of leads which then based on the features describing it can be a hot lead which will become a converted lead or in other words someone who will make a purchase.
 
 
-!![Image](image.jpg)
+![Image](image.jpg)
 
 Different models will be compared and the one with the best performance will be selected to be used in a lead prediction service so that the sales team knows-based on the data from marketing-which users can be potential customers. 
 
