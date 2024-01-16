@@ -13,6 +13,8 @@ tqdm = "*"
 flask = "*"
 requests = "*"
 gunicorn = "*"
+jupyter = "*"
+notebook = "*"
 
 [dev-packages]
 ipykernel = "*"
